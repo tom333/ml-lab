@@ -1,0 +1,16 @@
+singleuser:
+  image:
+    name: jupyter/tensorflow-notebook
+    tag: latest
+  defaultUrl: "/lab"
+  extraEnv:
+    JUPYTERHUB_SINGLEUSER_APP: "jupyter_server.serverapp.ServerApp"
+    HTTPS_PROXY: "http://proxy-web.proxy-dmz.gnc:3128"
+    HTTP_PROXY: "http://proxy-web.proxy-dmz.gnc:3128"
+    NO_PROXY: "localhost,127.0.0.1,127.0.1.1,.recif.nc,.appli-gestion.nc,.gnc,/var/run/docker.sock,10.10.106.0/24,.valid-gouv.nc,.dmz.nc,jira.gouv.nc,jira-info.gouv.nc,webnotes.gouv.nc,stats-new.gouv.nc,guichet-entrep$,192.168.62.38,.local,local,.lan,lan"
+    TOTO: "titi"
+
+  # registry: 
+  #   username: 'moi' 
+  #   email: 'laboitatom@gmail.com'
+  #   password: 'Passw0rd' 
